@@ -1,0 +1,28 @@
+{
+  "name": "smart-contract",
+  "version": "1.0.0",
+  "description": "\"Muro de arte pixelado\" (Pixel Wall DApp)",
+  "keywords": [
+    "\"smart",
+    "contracts\"",
+    "\"gaming\"",
+    "\"blockchain\"",
+    "\"Web3\"",
+    "\"token\""
+  ],
+  "homepage": "https://github.com/DanielaS-Tochi/pixel-wall-dapp#readme",
+  "bugs": {
+    "url": "https://github.com/DanielaS-Tochi/pixel-wall-dapp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielaS-Tochi/pixel-wall-dapp.git"
+  },
+  "license": "ISC",
+  "author": "Daniela Silvana Tochi",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
