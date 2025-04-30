@@ -6,19 +6,23 @@ contract PixelWall {
     uint8 public constant HEIGHT = 10;
 
     struct Pixel {
-        string color; // color HEX ej: "#FF5733"
+        string color; // Color HEX, ej: "#FF5733"
         address painter;
     }
 
     mapping(uint8 => mapping(uint8 => Pixel)) public pixels;
+    mapping(address => bool) public hasPainted;
 
     event PixelPainted(uint8 x, uint8 y, string color, address indexed painter);
 
     function paintPixel(uint8 x, uint8 y, string calldata color) external {
         require(x < WIDTH && y < HEIGHT, "Out of bounds");
+        require(!hasPainted[msg.sender], "Already painted a pixel");
+
         Pixel storage pixel = pixels[x][y];
         pixel.color = color;
         pixel.painter = msg.sender;
+        hasPainted[msg.sender] = true;
 
         emit PixelPainted(x, y, color, msg.sender);
     }
