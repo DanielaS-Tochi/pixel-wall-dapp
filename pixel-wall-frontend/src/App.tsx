@@ -26,7 +26,7 @@ function App() {
   };
 
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{ padding: 20, minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
       <h1>Pixel Wall</h1>
       <div>
         <label>
