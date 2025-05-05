@@ -27,8 +27,16 @@ function App() {
 
   return (
     <div style={{ padding: 20, minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-      <h1>Pixel Wall</h1>
-      <div>
+      <h1 style={{ margin: 0 }}>Pixel Wall</h1>
+        
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1rem" }}>
+        <img
+    src="/painting.png" 
+    alt="Imagen"
+    style={{ width: 150, height: 150, objectFit: "contain" }}
+        />
+        </div>
+        <div>
         <label>
           Pick a color:{" "}
           <input
@@ -44,3 +52,4 @@ function App() {
 }
 
 export default App;
+

@@ -12,6 +12,7 @@
   "dependencies": {
     "@tanstack/react-query": "^5.74.11",
     "@wagmi/core": "^1.4.13",
+    "ethers": "^6.13.7",
     "qr": "^0.4.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

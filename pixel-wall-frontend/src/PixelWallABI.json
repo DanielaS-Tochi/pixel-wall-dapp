@@ -1,0 +1,159 @@
+[
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "x",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "y",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "color",
+          "type": "string"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "painter",
+          "type": "address"
+        }
+      ],
+      "name": "PixelPainted",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "HEIGHT",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "WIDTH",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "x",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint8",
+          "name": "y",
+          "type": "uint8"
+        }
+      ],
+      "name": "getPixel",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "hasPainted",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "x",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint8",
+          "name": "y",
+          "type": "uint8"
+        },
+        {
+          "internalType": "string",
+          "name": "color",
+          "type": "string"
+        }
+      ],
+      "name": "paintPixel",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "name": "pixels",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "color",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "painter",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
