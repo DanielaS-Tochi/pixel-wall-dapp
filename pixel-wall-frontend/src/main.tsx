@@ -5,13 +5,13 @@ import App from './App'
 import './index.css'
 
 import { WagmiConfig, createConfig, configureChains } from 'wagmi'
-import { sepolia } from 'wagmi/chains'
+import { hardhat } from 'wagmi/chains'
 import { publicProvider } from '@wagmi/core/providers/public'
 import { InjectedConnector } from '@wagmi/core/connectors/injected'
 
 // Configurar chains y providers
 const { chains, publicClient } = configureChains(
-  [sepolia],
+  [hardhat],
   [publicProvider()]
 )
 

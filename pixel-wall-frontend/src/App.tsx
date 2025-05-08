@@ -26,8 +26,10 @@ function App() {
         const accounts = await window.ethereum.request({
           method: "eth_requestAccounts",
         });
+        console.log("Cuentas conectadas:", accounts);
         setAccount(accounts[0]);
       } catch (err) {
+        console.error("Error al conectar wallet:", err);
         alert("Wallet connection rejected.");
       }
     } else {
@@ -54,6 +56,7 @@ function App() {
         wall.push(row);
       }
       setPixels(wall);
+      console.log("Estado del muro actualizado:", wall);
     } finally {
       setLoading(false);
     }
@@ -83,11 +86,20 @@ function App() {
       return;
     }
     setLoading(true);
+    console.log("Intentando pintar:", { x, y, color: selectedColor, account });
     try {
       await paintPixel(x, y, selectedColor);
+      console.log("Transacción enviada para pintar pixel:", { x, y, color: selectedColor, account });
       await fetchWall();
-    } catch (err: any) {
-      alert(err?.reason || err?.message || "Transaction failed");
+    } catch (err: unknown) {
+      console.error("Error al pintar:", err);
+      if (err && typeof err === "object" && "reason" in err) {
+        alert((err as { reason?: string }).reason || "Transaction failed");
+      } else if (err && typeof err === "object" && "message" in err) {
+        alert((err as { message?: string }).message || "Transaction failed");
+      } else {
+        alert("Transaction failed");
+      }
     } finally {
       setLoading(false);
     }
